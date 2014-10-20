@@ -1,4 +1,6 @@
-styleguide
-==========
+## Code Style Guide
 
-This is how we roll
+Simple standards for writing readable code.
+
+
+* [JavaScript](JavaScript.md)
