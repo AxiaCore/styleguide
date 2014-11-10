@@ -4,3 +4,4 @@ Simple standards for writing readable code.
 
 
 * [JavaScript](JavaScript.md)
+* [Django](django.md)
