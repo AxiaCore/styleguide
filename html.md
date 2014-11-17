@@ -5,8 +5,8 @@ Standards for writing clean and readable HTML.
 
 ### Generalities
 
-    * Use 4 spaces tab
-    * Leave line breaks between blocks
+* Use 4 spaces tab
+* Leave line breaks between blocks
 
 ### Template statements
 
