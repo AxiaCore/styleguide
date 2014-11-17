@@ -8,8 +8,9 @@ Standards for writing clean and readable HTML.
 In order for statements to be readable in templates, we've decided to unindent them one tab so 
 that they're hightlighted, easy to spot and don't get misread as bare HTML.
 
+> Bad example
+
 ```html
-<!-- Bad example -->
 <div class="header">
     <div class="container">
       {% if a == b %}
@@ -17,9 +18,11 @@ that they're hightlighted, easy to spot and don't get misread as bare HTML.
       {% endif %}
     </div>
 </div>
+```
 
+> Good example
 
-<!-- Good example -->
+```html
 <div class="header">
     <div class="container">
   {% if a == b %}
