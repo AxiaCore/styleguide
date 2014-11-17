@@ -47,10 +47,11 @@ Make sure that child elements are indented one tab.
 
 ```html
 <div class="header">
-    <div class="container">
-        <div class="row">
-      <h1>Equal</h1>
-    </div>
+   <div class="container">
+   <div class="row">
+   <h1>Equal</h1>
+   </div>
+   </div>
 </div>
 ```
 
@@ -58,9 +59,11 @@ Make sure that child elements are indented one tab.
 
 ```html
 <div class="header">
-    <div class="container">
-      <h1>Equal</h1>
-    </div>
+   <div class="container">
+      <div class="row">
+         <h1>Equal</h1>
+      </div>
+   </div>
 </div>
 ```
 
