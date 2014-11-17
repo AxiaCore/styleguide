@@ -8,7 +8,7 @@ Standards for writing clean and readable HTML.
 In order for statements to be readable in templates, we've decided to unindent them one tab so 
 that they're hightlighted, easy to spot and don't get misread as bare HTML.
 
-> :x: Bad example
+> Bad example
 
 
 ```html
@@ -21,7 +21,7 @@ that they're hightlighted, easy to spot and don't get misread as bare HTML.
 </div>
 ```
 
-> :white_check_mark: Good example 
+> Good example 
 
 ```html
 <div class="header">
