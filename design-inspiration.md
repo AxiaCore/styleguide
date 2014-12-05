@@ -5,6 +5,7 @@
 ### Useful products 
 
 - [Gistbox](gistboxapp.com) - A GitHub integrated service for storing snippets
+- [Instacode](http://instacod.es/) - Visuals and code sharing tool
 
 ### Tutorials 
 
