@@ -66,4 +66,18 @@ Make sure that child elements are indented one tab.
    </div>
 </div>
 ```
+### Attributes
+Don't use spaces before and after equals '='.
+
+> Bad example
+
+```html
+<div class = "header"></div>
+```
+
+> Good example
+
+```html
+<div class="header"></div>
+```
 
