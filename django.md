@@ -72,5 +72,37 @@ class UserForm(UpdateView):
     ...
 ```
 
+### Views
+
+
+#### Get context
+
+Use direct assignment when passing a single variable to contex
+
+> Bad example
+
+```python 
+def get_context_data(self, **kwargs):
+    ...
+
+    context.update({
+        'comment_form': CommentForm,
+    })
+
+    ...
+```
+
+> Good example
+
+```python 
+
+def get_context_data(self, **kwargs):
+    ...
+
+    context['comment_form'] = CommentForm
+
+    ...
+```
+
 
 
