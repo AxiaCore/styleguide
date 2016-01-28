@@ -4,7 +4,8 @@ This is how we should write code.
 
 ## Commit messages
 
-* If it's necessary, you can add the Jira ticket id to the commit E.G: `(MA-1) ...`
+* If it's necessary, you can add the Jira ticket id to the commit E.G:
+`(MA-1) ...` or the Sentry issue number `#123`
 * Commit messages can also start with an emoji.
     * :lollipop: `:lollipop:` when improving code format and structure
     * :art: `:art:` when making visual changes
@@ -57,11 +58,13 @@ r'^(?P<slug>[-\w]+)/settings/$'
 Use an include for every dependency, even if they're under the same package.
 
 > Bad example
+
 ```python
 from app.views import HomeView, NewsletterView, WidgetView
 ```
 
 > Good example
+
 ```python
 from app.views import HomeView
 from app.views import NewsletterView
@@ -247,7 +250,7 @@ $('a').click(function(e) {
 });
 
 // Good example.
-$('a').click(function() {
+$('a').on('click', function() {
     $(this).hide();
 });
 
