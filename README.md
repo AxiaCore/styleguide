@@ -2,6 +2,18 @@
 
 This is how we should write code.
 
+## Commit messages
+
+* If it's necessary, you can add the Jira ticket id to the commit E.G: `(MA-1) ...`
+* Commit messages can also start with an emoji.
+    * :lollipop: `:lollipop:` when improving code format and structure
+    * :art: `:art:` when making visual changes
+    * :bug: `:bug:` when fixing bugs
+    * :memo: `:memo:` when writing documentation
+    * :fire: `:fire:` when removing unused code
+    * :sunny: `:sunny:` alternative emoji for a general improvement
+    * :white_check_mark: `:white_check_mark:` when fixing tests
+
 ## CSS
 
 Standars for writing styles mainly using SASS.
