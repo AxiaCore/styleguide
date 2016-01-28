@@ -5,7 +5,7 @@ This is how we should write code.
 ## Commit messages
 
 * If it's necessary, you can add the Jira ticket id to the commit E.G:
-`(MA-1) ...` or the Sentry issue number `#123`
+`MA-1 Added something...` or the Sentry issue number `#123 Fixes bug...`
 * Commit messages can also start with an emoji.
     * :lollipop: `:lollipop:` when improving code format and structure
     * :art: `:art:` when making visual changes
