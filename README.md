@@ -203,6 +203,17 @@ Don't use spaces before and after equals '='.
 <div class="header"></div>
 ```
 
+### Comparisons
+
+Using `is`, `is not` vs  `==` and `!=`
+
+`==` is an equality test. It checks whether the right hand side and the left hand side are equal objects (according to their __eq__ or __cmp__ methods.)
+
+`is` is an identity test. It checks whether the right hand side and the left hand side are the very same object. No methodcalls are done, objects can't influence the is operation.
+
+You use is (and is not) for singletons, like `None`, where you don't care about objects that might want to pretend to be None or where you want to protect against objects breaking when being compared against None.
+
+From: http://stackoverflow.com/questions/2209755/python-operation-vs-is-not
 
 ## JavaScript
 
