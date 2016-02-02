@@ -14,6 +14,49 @@ This is how we should write code.
     * :fire: `:fire:` when removing unused code
     * :sunny: `:sunny:` alternative emoji for a general improvement
     * :white_check_mark: `:white_check_mark:` when fixing tests
+    
+
+## Git flow
+
+By default we use three types of branches for each project:
+
+* **Production branch**: `master`, represents the production environment, what's shown in the live app.
+* **Development branch**: `dev`, represents development or staging environment.
+* **Feature branches**: E.G: `MA-1`, `MA-9`, `GP-19` etc. These branches represent a feature related with a specific User story.
+
+In order to start working on a new feature you should: 
+
+```bash
+# Start at the development branch.
+git checkout dev
+
+# Get latest changes.
+git pull origin dev
+
+# Move to a branch with the name of the user story.
+git go <user story id E.G: MA-18>
+
+# Add changes.
+
+# Commit changes.
+g ca 
+
+# Push changes and create pull request.
+g push 
+
+# Go back to `dev` and pull again.
+git checkout ...
+```
+
+
+## Pull request checklist
+
+This is a list of common checks one might have in mind when creating a Pull Request.
+
+* Remove occurrences of `print`.
+* Add dash at the end of URLs E.G `r'^update/account$'` should be `^update/account/$`.
+* Remove unnecessary blank lines.
+* Make sure you keep business logic in views not in form.
 
 ## CSS
 
@@ -278,13 +321,3 @@ $('a').on('click', function() {
 });
 
 ```
-
-## Pull request checklist
-
-This is a list of common checks one might have in mind when creating a Pull Request.
-
-* Remove occurrences of `print`.
-* Add dash at the end of URLs E.G `r'^update/account$'` should be `^update/account/$`.
-* Remove unnecessary blank lines.
-* Make sure you keep business logic in views not in form.
-
