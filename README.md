@@ -229,6 +229,18 @@ var stars_counter = 10;
 var starsCounter = 10;
 ```
 
+### Assigning `this`.
+
+When assigning `this` to a variable name the variable `that`.
+```js
+var that = this;
+
+....
+$('..').on('click', function() {
+   $(that)...
+});
+```
+
 ### Reserved words.
 
 Avoid using these words in variables and functions:
