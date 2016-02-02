@@ -278,3 +278,13 @@ $('a').on('click', function() {
 });
 
 ```
+
+## Pull request checklist
+
+This is a list of common checks one might have in mind when creating a Pull Request.
+
+* Remove occurrences of `print`.
+* Add dash at the end of URLs E.G `r'^update/account$'` should be `^update/account/$`.
+* Remove unnecessary blank lines.
+* Make sure you keep business logic in views not in form.
+
