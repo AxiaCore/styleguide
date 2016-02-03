@@ -33,6 +33,9 @@ git checkout dev
 # Get latest changes.
 git pull origin dev
 
+# Migrate database.
+docker exec -it <project_name>_web_1 python manage.py migrate <app name> 
+
 # Move to a branch with the name of the user story.
 git go <user story id E.G: MA-18>
 
