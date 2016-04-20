@@ -142,7 +142,7 @@ class UserForm(UpdateView):
 
 ### Get context
 
-Use direct assignment when passing a single variable to contex
+Use direct assignment when passing a **single** variable to contex
 
 > Bad example
 
@@ -165,6 +165,37 @@ def get_context_data(self, **kwargs):
     ...
 
     context['comment_form'] = CommentForm
+
+    ...
+```
+
+Use `update` when passing multiple variables.
+
+> Bad example
+
+```python
+
+def get_context_data(self, **kwargs):
+    ...
+
+    context['comment_form'] = CommentForm
+    context['items_list'] = items_list
+    context['users_list'] = users_list
+
+    ...
+```
+
+> Good example
+
+```python
+def get_context_data(self, **kwargs):
+    ...
+
+    context.update({
+        'comment_form': CommentForm,
+        'items_list': items_list,
+        'users_list': users_list,
+    })
 
     ...
 ```
