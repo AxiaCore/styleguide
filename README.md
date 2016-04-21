@@ -236,6 +236,44 @@ as bare HTML.
 </div>
 ```
 
+**More examples**
+
+> Bad example
+
+```html
+<div class="header">
+    <div class="container">
+        {% for item in item_list %}
+        <h1>Equal</h1>
+        {% endif %}
+    </div>
+</div>
+```
+
+> Good example
+
+```html
+<div class="header">
+   <div class="container">
+   {% for item in item_list %}
+      <h1>Equal</h1>
+   {% endif %}
+   </div>
+</div>
+```
+
+```html
+<div class="header">
+   <div class="container">
+   {% for item in item_list %}
+      {% if a == b %}
+         <h1>Equal</h1>
+      {% endif %}
+   {% endif %}
+   </div>
+</div>
+```
+
 
 ### Indentation
 
