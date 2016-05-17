@@ -2,6 +2,10 @@
 
 This is how we should write code.
 
+## Django Style
+	https://docs.djangoproject.com/en/1.9/internals/contributing/writing-code/coding-style/
+
+
 ## Commit messages
 
 * If it's necessary, you can add the Jira ticket id to the commit E.G:
@@ -142,7 +146,7 @@ class UserForm(UpdateView):
 
 ### Get context
 
-Use direct assignment when passing a **single** variable to contex
+Use direct assignment when passing a single variable to contex
 
 > Bad example
 
@@ -165,37 +169,6 @@ def get_context_data(self, **kwargs):
     ...
 
     context['comment_form'] = CommentForm
-
-    ...
-```
-
-Use `update` when passing multiple variables.
-
-> Bad example
-
-```python
-
-def get_context_data(self, **kwargs):
-    ...
-
-    context['comment_form'] = CommentForm
-    context['items_list'] = items_list
-    context['users_list'] = users_list
-
-    ...
-```
-
-> Good example
-
-```python
-def get_context_data(self, **kwargs):
-    ...
-
-    context.update({
-        'comment_form': CommentForm,
-        'items_list': items_list,
-        'users_list': users_list,
-    })
 
     ...
 ```
@@ -233,44 +206,6 @@ as bare HTML.
         <h1>Equal</h1>
     {% endif %}
     </div>
-</div>
-```
-
-**More examples**
-
-> Bad example
-
-```html
-<div class="header">
-    <div class="container">
-        {% for item in item_list %}
-        <h1>Equal</h1>
-        {% endif %}
-    </div>
-</div>
-```
-
-> Good example
-
-```html
-<div class="header">
-   <div class="container">
-   {% for item in item_list %}
-      <h1>Equal</h1>
-   {% endif %}
-   </div>
-</div>
-```
-
-```html
-<div class="header">
-   <div class="container">
-   {% for item in item_list %}
-      {% if a == b %}
-         <h1>Equal</h1>
-      {% endif %}
-   {% endif %}
-   </div>
 </div>
 ```
 
