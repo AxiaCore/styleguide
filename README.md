@@ -64,19 +64,99 @@ This is a list of common checks one might have in mind when creating a Pull Requ
 * Remove unnecessary blank lines.
 * Make sure you keep business logic in views not in form.
 
+
 ## CSS
 
 Standars for writing styles mainly using SASS.
+
+Frameworks: Bourbon
+
+### Generalities
+* Class names: http://codeguide.co/#css-classes
+* Don't use @import: http://codeguide.co/#css-import
+* Media query placement: http://codeguide.co/#css-media-queries
+* Order properties alphabetically
+
 
 ### Variables
 
 Embrace the use of sass variables, and when possible avoid using direct color
 codes to elements, instead create a variable for such code.
 
-### Frameworks
+If you have more than one color of the same tone you should call it:
 
-- Bourbon
+```sass
+$blue-primary:   #0583F2
+$blue-secondary: #072E30
+$blue-tertiary:  #226BAB
+```
 
+### Avoid extra selectrors
+
+It's easy to unknowingly add extra selectors to our CSS that clutters the stylesheet.
+
+> Incorrect example
+
+```css
+.someClass ul li
+```
+
+> Correct example
+
+```css
+.someClass li
+```
+
+### Use text-transform
+
+In the html don't write the text in uppercase or lowercase. It would be harder to maintain in the future
+
+> Incorrect example
+
+```html
+<h1>MAIN TITLE</h1>
+```
+
+> Correct example
+
+```html
+<h1>Main title</h1>
+```
+
+```css
+h1 { text-transform: uppercase; }
+```
+
+### Use ems
+
+Use ems for the following css properties:
+
+```sass
+font-size: 1em
+line-height: 1.5em
+margin: 0.75em
+padding: 2em 1em
+```
+
+This would help to keep the vertical rhythm. Read this article: https://zellwk.com/blog/why-vertical-rhythms, and this one: https://zellwk.com/blog/rem-vs-em/
+
+### @include goes at the end
+
+> Incorrect example
+
+```sass
+@include ...
+margin: 0.75em
+padding: 2em 1em
+```
+
+> Correct example
+
+```sass
+margin: 0.75em
+padding: 2em 1em
+@include ...
+```
 
 ## Python
 
@@ -319,6 +399,8 @@ Don't use spaces before and after equals '='.
 <div class="header"></div>
 ```
 
+The order of the attrubutes should be: http://codeguide.co/#html-attribute-order
+
 ### Comparisons
 
 Using `is`, `is not` vs  `==` and `!=`
@@ -330,6 +412,26 @@ Using `is`, `is not` vs  `==` and `!=`
 You use is (and is not) for singletons, like `None`, where you don't care about objects that might want to pretend to be None or where you want to protect against objects breaking when being compared against None.
 
 From: http://stackoverflow.com/questions/2209755/python-operation-vs-is-not
+
+
+### Don't just wrap a div around it
+
+Don't have to wrap a div with an ID or class around an element and create a style for it.
+
+> Incorrect example
+
+```html
+<div class="mainTitle"><h1>Main title</h1></div>
+```
+
+> Correct example
+
+```html
+<h1>Main title</h1>
+```
+
+Then you can easily add a style to the h1 instead of a parent div
+
 
 ## JavaScript
 
