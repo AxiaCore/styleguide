@@ -72,10 +72,15 @@ Standars for writing styles mainly using SASS.
 Frameworks: Bourbon
 
 ### Generalities
-* Class names: http://codeguide.co/#css-classes
-* Don't use @import: http://codeguide.co/#css-import
-* Media query placement: http://codeguide.co/#css-media-queries
-* Order properties alphabetically
+* Class names: http://codeguide.co/#css-classes.
+* Don't use @import: http://codeguide.co/#css-import.
+* Media query placement: http://codeguide.co/#css-media-queries.
+* Order properties alphabetically.
+* Include one space after : for each declaration.
+* Don't prefix property values or color parameters with a leading zero (e.g., `.5` instead of `0.5` and `-.5px` instead of `-0.5px`).
+* Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.
+* Lowercase all hex values, e.g., `#fff`. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.
+* Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff`.
 
 
 ### Variables
@@ -157,6 +162,15 @@ margin: 0.75em
 padding: 2em 1em
 @include ...
 ```
+
+### CSS animations with `transform`
+
+Don't animate elements by changing width, height, left, top, bottom or right. It's a best practice to use the transform() property as it provides smoother transitions.
+
+### Don't use `!important`
+
+Is a quick fix, however it may end up causing lots of rewrites in the future. Instead, find why your CSS selectors isn't working and change it.
+
 
 ## Python
 
