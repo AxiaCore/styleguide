@@ -91,9 +91,9 @@ codes to elements, instead create a variable for such code.
 If you have more than one color of the same tone you should call it:
 
 ```sass
-$blue-primary:   #0583F2
-$blue-secondary: #072E30
-$blue-tertiary:  #226BAB
+$blue-primary:   #0583f2
+$blue-secondary: #072e30
+$blue-tertiary:  #226bab
 ```
 
 ### Avoid extra selectrors
